@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Utilities {
-    public final static int THRESHOLD = 100;
+    public final static int THRESHOLD = 10;
 
     public static void swap(int[] array, int i, int j) {
         int temp = array[i];
