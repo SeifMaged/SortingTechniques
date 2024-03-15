@@ -29,4 +29,18 @@ public class QuickSort implements Sort {
         Utilities.swap(arr, i + 1, last);
         return i + 1;
     }
+
+    public int getKthSmallestElement(int[] array, int first, int last, int k){
+        if(k >= 0 && k < last - first + 1){
+            int posititon = partition(array, first, last);
+            if(posititon - first == k){
+                return array[posititon];
+            }
+            else if(posititon - first > k){
+                return getKthSmallestElement(array, first, posititon - 1, k);
+            }
+            return getKthSmallestElement(array, posititon + 1, last,k - posititon + first - 1);
+        }
+        return 0;
+    }
 }
