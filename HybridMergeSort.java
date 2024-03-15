@@ -9,8 +9,8 @@ public class HybridMergeSort extends MergeSort {
                 new InsertionSort().sort(arr, first, last);
             } else {
                 int mid = (first + last) / 2;
-                sort(arr, first, mid);
-                sort(arr, mid + 1, last);
+                this.sort(arr, first, mid);
+                this.sort(arr, mid + 1, last);
                 merge(arr, first, mid, last);
             }
         }
