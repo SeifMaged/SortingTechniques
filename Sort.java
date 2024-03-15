@@ -1,3 +1,3 @@
 public interface Sort {
-    // this is an empty interface
+    void sort(int arr[]);
 }
